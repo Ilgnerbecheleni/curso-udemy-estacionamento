@@ -61,7 +61,7 @@ const Definicoes = () => {
             if (error) {
                 console.error(error)
             }
-            e.target.reset()
+            e.target.reset();
             lerdados();
             notifySucces();
 
@@ -86,7 +86,7 @@ const Definicoes = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3 mt-5">
                         <label className="form-label">Definir novo preço</label>
-                        <input type="number" className="form-control" onChange={(e) => { setPrecoNovo(e.target.value) }} />
+                        <input type="number" className="form-control" onChange={(e) => { setPrecoNovo(e.target.value) }} required  min={2}/>
                     </div>
                     <button type="submit" className="btn btn-primary">Definir</button>
                 </form>
